@@ -1,0 +1,6 @@
+From node:14-alpine3.16
+WORKDIR /usr/app
+COPY . .
+RUN npm install
+EXPOSE 3030
+CMD [ "npm" , "run" , "dev"]
