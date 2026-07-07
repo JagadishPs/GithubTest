@@ -217,7 +217,6 @@ resource "aws_codebuild_project" "codebuild_project" {
     location        = local.full_repo_id
     git_clone_depth = 1
     buildspec       = local.buildspec
-
     git_submodules_config {
       fetch_submodules = true
     }
