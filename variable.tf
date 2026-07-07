@@ -47,7 +47,7 @@ variable "git_repo_name" {
 variable "git_branch_name" {
   description = "Github Branch for the Repository"
   type        = string
-  default     = "develop"
+  default     = "main"
 }
 
 variable "github_token" {
@@ -94,7 +94,7 @@ variable "ecr_repo" {
 variable "s3_bucket" {
   description = "Name of artifact bucket"
   type        = string
-  default     = "cicd-ID.codepipeline-artifacts.eu-west-1"
+  default     = "cicd-ID.codepipeline-artifacts.us-west-2"
 }
 
 variable "buildspec_path" {
@@ -112,7 +112,7 @@ variable "build_timeout" {
   default = 120
 }
 
-"owner"                    = var.owner
+      "owner"                    = var.owner
       "project"                  = var.project
       "application"              = var.application
       "cost-centre"              = var.cost_centre
