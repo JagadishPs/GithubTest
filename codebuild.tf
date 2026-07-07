@@ -80,11 +80,6 @@ resource "aws_iam_role_policy" "codebuild-policy" {
 			"Resource": "*",
 			"Effect": "Allow"
 		},
-
-
-
-
-
 		{
 			"Effect": "Allow",
 			"Action": [
