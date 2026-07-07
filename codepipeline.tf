@@ -1,6 +1,6 @@
 resource "aws_iam_role" "codepipeline-role" {
   description = "CodePipeline Service Role"
-  name        = "${var.tenant}-${var.project}-${var.environment}-codepipeline-role" #var.codepipeline_role_name
+  name        = "${var.tenant}-${var.project}-${var.environment}-codepipeline-role"
 
   assume_role_policy = <<EOF
 {
@@ -19,7 +19,7 @@ EOF
 }
 
 resource "aws_iam_role_policy" "codepipeline-policy" {
-  name = "${var.tenant}-${var.project}-${var.environment}-codepipeline-policy" #var.codepipeline_policy_name
+  name = "${var.tenant}-${var.project}-${var.environment}-codepipeline-policy"
   role = aws_iam_role.codepipeline-role.name
   policy = <<EOF
 {
