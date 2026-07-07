@@ -156,7 +156,6 @@ resource "aws_codepipeline" "codepipeline" {
       provider        = "CodeDeployToECS"
       input_artifacts = ["build_output"]
       version         = "1"
-
       configuration = {
         ApplicationName                = "${var.tenant}-${var.project}-ecsdeploy"#"AppECS-warehouse-webapp-cluster-warehouse-webapp-service-manual"
         DeploymentGroupName            = "${var.tenant}-${var.project}-ecs-dpg" #"DgpECS-warehouse-webapp-cluster-warehouse-webapp-service-manual" 
